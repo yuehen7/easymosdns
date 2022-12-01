@@ -1,3 +1,5 @@
+# 在原版基础上加入geoip 和 geosite规则
+
 # EasyMosdns
 
 简化Mosdns基本功能使用的辅助脚本，仅需几分钟即可搭建一台支持ECS的无污染DNS服务器。<br />
@@ -338,17 +340,14 @@ chmod +x /etc/mosdns/tools/config-reset
         addr: "0.0.0.0:8053"
 ```
 
+# 致谢  
+
+[EasyMosdns](https://apad.pro/easymosdns)
+
+
 #### 更多帮助和支持
 
 - 项目完整开源，可用于部署DNS服务器、开发软路由插件等多种场景
-- 使用源码仅需标明使用 [EasyMosdns](https://apad.pro/easymosdns) 的源码即可
 - 配置文件相关问题，请查阅 [Mosdns-Wiki](https://irine-sistiana.gitbook.io/mosdns-wiki/)
-
-#### 如何支持作者
-[前往打赏](https://afdian.net/a/maplecool)
 <br />
 
-## Contact Us
-
-For feedback, questions, and to follow the progress of the project: <br />
-[Telegram Group](https://t.me/+VeV5wt1E6FA5Ue-x)<br />
