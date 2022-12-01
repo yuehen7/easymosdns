@@ -342,7 +342,7 @@ chmod +x /etc/mosdns/tools/config-reset
 
 # 致谢  
 
-[EasyMosdns](https://apad.pro/easymosdns)
+[EasyMosdns](https://github.com/pmkol/easymosdns)
 
 
 #### 更多帮助和支持
