@@ -6,6 +6,15 @@ log:
     level: error
 
 data_providers:
+  - tag: cn
+    file: ./rules/cn.dat
+    auto_reload: true
+  - tag: geosite
+    file: ./rules/geosite.dat
+    auto_reload: true
+  - tag: geoip
+    file: ./rules/geoip.dat
+    auto_reload: true
   - tag: chinalist
     file: ./rules/china_domain_list.txt
     auto_reload: true
@@ -129,6 +138,9 @@ plugins:
     args:
       domain:
         - "provider:chinalist"
+        - "provider:geosite:cn"
+        - "provider:geosite:apple-cn"
+        - "provider:geosite:steam@cn"
 
   # 匹配污染域名的插件
   - tag: query_is_non_local_domain
@@ -136,6 +148,7 @@ plugins:
     args:
       domain:
         - "provider:gfwlist"
+        - "provider:geosite:geolocation-!cn"
 
   # 匹配CDN域名的插件
   - tag: query_is_cdn_cn_domain
@@ -150,6 +163,7 @@ plugins:
     args:
       domain:
         - "provider:adlist"
+        - "provider:geosite:category-ads-all"
 
   # 匹配强制本地解析域名的插件
   - tag: query_is_cn_domain
@@ -171,6 +185,7 @@ plugins:
     args:
       ip:
         - "provider:chinaip"
+        - "provider:cn:cn"
 
   # 匹配污染IP的插件
   - tag: response_has_gfw_ip
